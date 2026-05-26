@@ -1,0 +1,19 @@
+INVESTIGACIÓN SOBRE LA EFICIENCIA DEL LENGUAJE JULIA
+
+1. Introducción: ¿Qué hace a Julia especial?
+Julia fue diseñado para resolver el "problema de los dos lenguajes". Tradicionalmente, los científicos y programadores usan un lenguaje lento pero fácil (como Python o R) para prototipar y explorar datos, y luego deben reescribir las partes críticas en un lenguaje rápido pero complejo (como C++ o Fortran) para producción. Julia elimina esta necesidad al ofrecer una sintaxis de alto nivel con un rendimiento comparable a C.
+
+2. El Algoritmo Elegido: Conjunto de Mandelbrot
+Para ejemplificar esta eficiencia, se ha implementado el cálculo del Conjunto de Mandelbrot. Este es un fractal que requiere realizar miles de iteraciones matemáticas sobre números complejos para cada píxel de una imagen.
+
+¿Por qué es este un buen ejemplo?
+- Intensidad Computacional: Requiere bucles anidados profundos.
+- Comparativa: En lenguajes interpretados como Python, este algoritmo es extremadamente lento a menos que se usen librerías externas pesadas. En Julia, el código escrito con bucles simples "puros" corre a velocidad nativa.
+
+3. Factores Clave de Eficiencia en Julia
+- Compilación Just-In-Time (JIT): Julia usa el framework LLVM para compilar el código a lenguaje máquina justo antes de ejecutarlo.
+- Multiple Dispatch (Despacho Múltiple): Es el paradigma central de Julia. Permite que el compilador genere código altamente optimizado para combinaciones específicas de tipos de argumentos.
+- Inferencia de Tipos: El compilador deduce los tipos de datos, permitiendo optimizaciones de memoria sin que el programador tenga que declarar tipos manualmente en todo momento.
+
+4. Conclusión
+Julia brilla en situaciones donde el rendimiento numérico es crítico pero la agilidad del desarrollo también es una prioridad. Campos como la inteligencia artificial, la simulación física y el análisis genómico se benefician enormemente de su arquitectura.
